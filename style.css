@@ -9,6 +9,10 @@
 
 /* TRANSITION FROM SCSS */
 
+body, html{
+    padding:0;
+    margin:0;
+}
 #main_body {
     background: #69f;
     color: #fff;
