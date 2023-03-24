@@ -18,6 +18,15 @@ html {
     transform: translate(-50%, -50%);
 }
 
+#body f {
+    font-size: 0.8em;
+    color: #c2c9d6;
+}
+
+#body f a {
+    color: inherit;
+}
+
 #body h2 {
     font-size: 2.5em;
 }
