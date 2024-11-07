@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Mati Kepa</title>
+    <link>https://kepa.eu.org/blog/</link>
+    <description>Recent content in Blog on Mati Kepa</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://kepa.eu.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>start with minikube</title>
+      <link>https://kepa.eu.org/blog/post002/</link>
+      <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://kepa.eu.org/blog/post002/</guid>
+      <description>You heard about kubernetes right?? Here are the steps how to run it locally with having docker installed only. Click for more &amp;hellip;</description>
+    </item>
+    <item>
+      <title>start</title>
+      <link>https://kepa.eu.org/blog/post001/</link>
+      <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
+      <guid>https://kepa.eu.org/blog/post001/</guid>
+      <description>Click for more &amp;hellip;</description>
+    </item>
+  </channel>
+</rss>
