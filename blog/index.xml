@@ -10,16 +10,16 @@
     <atom:link href="https://kepa.eu.org/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>start with minikube</title>
-      <link>https://kepa.eu.org/blog/post002/</link>
+      <link>https://kepa.eu.org/blog/post001/</link>
       <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://kepa.eu.org/blog/post002/</guid>
+      <guid>https://kepa.eu.org/blog/post001/</guid>
       <description>You heard about kubernetes right?? Here are the steps how to run it locally with having docker installed only. Click for more &amp;hellip;</description>
     </item>
     <item>
       <title>start</title>
-      <link>https://kepa.eu.org/blog/post001/</link>
+      <link>https://kepa.eu.org/blog/post000/</link>
       <pubDate>Thu, 01 Jan 1970 00:00:00 +0000</pubDate>
-      <guid>https://kepa.eu.org/blog/post001/</guid>
+      <guid>https://kepa.eu.org/blog/post000/</guid>
       <description>Click for more &amp;hellip;</description>
     </item>
   </channel>
