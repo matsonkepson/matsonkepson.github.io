@@ -13,12 +13,12 @@
 
 
 
-  <meta name="author" content="Mateusz (Mati) Kepa" />
+  <meta name="author" content="Mateusz (Mati) Kępa" />
 
 
 
 
-  <meta name="description" content="Build with Qubt &amp; Hugo &amp; GHPages" />
+  <meta name="description" content="Build with Qubt &amp; Hugo" />
 
 
 
@@ -28,7 +28,7 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/css/main.bundle.min.955b22a3fcff20511a11d9c7fdac7dd57e8293ee16e4d4ca0d6ab737f4895c3017582739cfd1f17a7c3feae23b42a8f4b01d7052fa2bc03a1430fa0669bf2d60.css" integrity="sha512-lVsio/z/IFEaEdnH/ax91X6Ck&#43;4W5NTKDWq3N/SJXDAXWCc5z9Hxenw/6uI7Qqj0sB1wUvorwDoUMPoGab8tYA==" />
+<link type="text/css" rel="stylesheet" href="/css/main.bundle.min.a07226f59ef39032dcec04628ab592e71d82ab9ecac024485280dead2b9565e7a4f6e048d984ac4720f62d03a4d67927e4360f2541b0f55d92d4f4e3aa63ac07.css" integrity="sha512-oHIm9Z7zkDLc7ARiirWS5x2Cq57KwCRIUoDerSuVZeek9uBI2YSsRyD2LQOk1nkn5DYPJUGw9V2S1PTjqmOsBw==" />
 
 
 
@@ -52,20 +52,20 @@
 
 <meta property="og:url" content="https://kepa.eu.org/blog/post002/">
   <meta property="og:site_name" content="Mati Kepa">
-  <meta property="og:title" content="start with minikube">
-  <meta property="og:description" content="You heard about kubernetes right?? Here are the steps how to run it locally with having docker installed only. Click for more …">
+  <meta property="og:title" content="start with argoCD">
+  <meta property="og:description" content="Try argoCD with local k8s and terraform! Click for more …">
   <meta property="og:locale" content="en_us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
-    <meta property="article:published_time" content="2024-11-06T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-11-06T00:00:00+00:00">
+    <meta property="article:published_time" content="2024-11-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-08T00:00:00+00:00">
     <meta property="og:image" content="https://kepa.eu.org/thumbnail.jpeg">
 
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://kepa.eu.org/thumbnail.jpeg">
-  <meta name="twitter:title" content="start with minikube">
-  <meta name="twitter:description" content="You heard about kubernetes right?? Here are the steps how to run it locally with having docker installed only. Click for more …">
+  <meta name="twitter:title" content="start with argoCD">
+  <meta name="twitter:description" content="Try argoCD with local k8s and terraform! Click for more …">
 
 
 <script>
@@ -107,7 +107,7 @@
         </a>
       
         <a href="/about/" class="px-3 py-2 text-slate-700 hover:text-indigo-500 md:p-0 dark:text-slate-400">
-          About
+          About me
         </a>
       
     </nav>
@@ -140,7 +140,7 @@
       </a>
     
       <a href="/about/" class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 md:p-0 dark:text-slate-400">
-        About
+        About me
       </a>
     
   </nav>
@@ -159,13 +159,13 @@
   <div class="justify-left mx-auto mt-8 flex max-w-screen-md px-4">
     <article>
       <h1 class="text-4xl font-extrabold text-slate-700 dark:text-slate-200">
-        start with minikube
+        start with argoCD
       </h1>
       <h2 class="mt-4 text-2xl text-slate-500 dark:text-slate-400">
         
       </h2>
       <div class="mb-4 mt-2 text-sm text-slate-500 dark:text-slate-400">
-        Nov 6, 2024 - 1 minute read
+        Nov 8, 2024 - 2 minute read
       </div>
 
       
@@ -173,17 +173,73 @@
       
 
       <span class="prose prose-slate break-words text-lg text-slate-700 dark:prose-invert prose-pre:max-w-[90vw] md:prose-pre:max-w-screen-md dark:text-slate-200">
-        <p>install minikube</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-</span></span><span style="display:flex;"><span>sudo install minikube-linux-amd64 /usr/local/bin/minikube 
-</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;alias m=&#39;/usr/local/bin/minikube &#39;&#34;</span>
-</span></span></code></pre></div><p>start your minikube</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>minikube start --kubernetes-version<span style="color:#f92672">=</span>v1.31.0 <span style="color:#ae81ff">\
-</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--addons metrics-server --driver<span style="color:#f92672">=</span>docker
-</span></span></code></pre></div><p>add more nodes</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>minikube node add
-</span></span></code></pre></div><p>get basic web interface for kubernetes</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>minikube dashboard
+        <h3 id="preface">preface</h3>
+<p>Experiment with using Terraform to set up ArgoCD. Start by creating the necessary files. Then, initialize your Terraform configuration with <strong>terraform init</strong>, and apply the configuration using <strong>terraform apply</strong>.
+APPlication will be created inside argocd namespace, to get the secret run</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>k -n argocd get secrets argocd-initial-admin-secret -o jsonpath<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{.data.password}&#34;</span>|base64 -d ;echo
+</span></span></code></pre></div><p>to access the application with port forward run</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>k -n argocd port-forward svc/argocd-server 8080:80
+</span></span></code></pre></div><p>website : <a href="http://127.0.0.1:8080">http://127.0.0.1:8080</a></p>
+<p>username : admin</p>
+<p>password: token from previous secret</p>
+<h3 id="terraform-code">terraform code</h3>
+<p>provider.tf</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#a6e22e">terraform</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">required_version</span> = <span style="color:#e6db74">&#34;&gt;= 1.9&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">required_providers</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">helm</span> = {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">source</span>  = <span style="color:#e6db74">&#34;hashicorp/helm&#34;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;~&gt; 2.11&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">provider</span> <span style="color:#e6db74">&#34;helm&#34;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">kubernetes</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">config_path</span> = <span style="color:#e6db74">&#34;~/.kube/config&#34;</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}<span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">## tryout for AWS cluster
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># provider &#34;helm&#34; {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   kubernetes {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#     host                   = aws_eks_cluster.demo.endpoint
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#     cluster_ca_certificate = base64decode(aws_eks_cluster.demo.certificate_authority[0].data)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#     exec {
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#       api_version = &#34;client.authentication.k8s.io/v1beta1&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#       args        = [&#34;eks&#34;, &#34;get-token&#34;, &#34;--cluster-name&#34;, aws_eks_cluster.demo.id]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#       command     = &#34;aws&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#     }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#   }
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># }
+</span></span></span></code></pre></div><p>argocd.tf</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-terraform" data-lang="terraform"><span style="display:flex;"><span><span style="color:#75715e">## Equivalent of manual installation
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># helm repo add argo https://argoproj.github.io/argo-helm
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># helm repo update
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"># helm install argocd --namespace argocd --create-namespace --version 7.7.0 --values values/argocd.yaml argo/argo-cd
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">resource</span> <span style="color:#e6db74">&#34;helm_release&#34;</span> <span style="color:#e6db74">&#34;argocd&#34;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;argocd&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">repository</span>       = <span style="color:#e6db74">&#34;https://argoproj.github.io/argo-helm&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">chart</span>            = <span style="color:#e6db74">&#34;argo-cd&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">namespace</span>        = <span style="color:#e6db74">&#34;argocd&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">create_namespace</span> = <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">version</span>          = <span style="color:#e6db74">&#34;7.7.0&#34;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">timeout</span>          = <span style="color:#ae81ff">600</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">values</span> = [file(&#34;values<span style="color:#f92672">/</span><span style="color:#a6e22e">argocd</span>.<span style="color:#a6e22e">yaml</span><span style="color:#e6db74">&#34;)]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">}
+</span></span></span></code></pre></div><p>values/argocd.yaml</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># Disable HTTPS; expose it via ingress and terminate TLS there</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">configs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">params</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">server.insecure</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">notifications</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">enabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">secret</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">create</span>: <span style="color:#66d9ef">false</span>
 </span></span></code></pre></div>
       </span>
     </article>
@@ -197,7 +253,7 @@
   <p class="text-center text-slate-700 dark:text-slate-400">
     &copy;
     2024
-    Mateusz (Mati) Kepa
+    Mateusz (Mati) Kępa
   </p>
 
   

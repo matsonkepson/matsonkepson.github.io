@@ -6,8 +6,15 @@
     <description>Recent content in Blog on Mati Kepa</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 06 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 08 Nov 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://kepa.eu.org/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>start with argoCD</title>
+      <link>https://kepa.eu.org/blog/post002/</link>
+      <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://kepa.eu.org/blog/post002/</guid>
+      <description>Try argoCD with local k8s and terraform! Click for more &amp;hellip;</description>
+    </item>
     <item>
       <title>start with minikube</title>
       <link>https://kepa.eu.org/blog/post001/</link>
