@@ -28,7 +28,7 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/css/main.bundle.min.955b22a3fcff20511a11d9c7fdac7dd57e8293ee16e4d4ca0d6ab737f4895c3017582739cfd1f17a7c3feae23b42a8f4b01d7052fa2bc03a1430fa0669bf2d60.css" integrity="sha512-lVsio/z/IFEaEdnH/ax91X6Ck&#43;4W5NTKDWq3N/SJXDAXWCc5z9Hxenw/6uI7Qqj0sB1wUvorwDoUMPoGab8tYA==" />
+<link type="text/css" rel="stylesheet" href="/css/main.bundle.min.a07226f59ef39032dcec04628ab592e71d82ab9ecac024485280dead2b9565e7a4f6e048d984ac4720f62d03a4d67927e4360f2541b0f55d92d4f4e3aa63ac07.css" integrity="sha512-oHIm9Z7zkDLc7ARiirWS5x2Cq57KwCRIUoDerSuVZeek9uBI2YSsRyD2LQOk1nkn5DYPJUGw9V2S1PTjqmOsBw==" />
 
 
 
@@ -107,7 +107,7 @@
         </a>
       
         <a href="/about/" class="px-3 py-2 text-slate-700 hover:text-indigo-500 md:p-0 dark:text-slate-400">
-          About
+          About me
         </a>
       
     </nav>
@@ -140,7 +140,7 @@
       </a>
     
       <a href="/about/" class="px-3 py-2 text-center text-slate-700 hover:text-indigo-500 md:p-0 dark:text-slate-400">
-        About
+        About me
       </a>
     
   </nav>
@@ -173,10 +173,14 @@
       
 
       <span class="prose prose-slate break-words text-lg text-slate-700 dark:prose-invert prose-pre:max-w-[90vw] md:prose-pre:max-w-screen-md dark:text-slate-200">
-        <p>install minikube</p>
+        <p>preface</p>
+<p>While there are other options like Kind, K3s, MicroK8s, the Minikube is a balance of simplicity, flexibility, additionally community support makes it a great choice for many developers. Whats more ist really super simple to start with. To stat, all you need to have is installed docker engine and kubectl cli locally!</p>
+<p>install minikube</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-</span></span><span style="display:flex;"><span>sudo install minikube-linux-amd64 /usr/local/bin/minikube 
-</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;alias m=&#39;/usr/local/bin/minikube &#39;&#34;</span>
+</span></span><span style="display:flex;"><span>sudo install minikube-linux-amd64 /usr/local/bin/minikube
+</span></span><span style="display:flex;"><span><span style="color:#75715e">## Optional</span>
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;alias m=&#39;/usr/local/bin/minikube &#39;&#34;</span> &gt;&gt; ~/.bash_aliases
+</span></span><span style="display:flex;"><span>echo <span style="color:#e6db74">&#34;source &lt;(minikube completion bash)&#34;</span> &gt;&gt; ~/.bashrc
 </span></span></code></pre></div><p>start your minikube</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>minikube start --kubernetes-version<span style="color:#f92672">=</span>v1.31.0 <span style="color:#ae81ff">\
 </span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>--addons metrics-server --driver<span style="color:#f92672">=</span>docker
