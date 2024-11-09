@@ -18,7 +18,7 @@ jobs:
         id: cpr
         uses: peter-evans/create-pull-request@v7.0.5
         with:
-          repo-token: ${{ secrets.PR_TOKEN }}
+          token: ${{ secrets.PR_TOKEN }}
           commit-message: Update main
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
@@ -27,6 +27,6 @@ jobs:
           title: 'Updating main'
           labels: |
             update
-          # reviewers: matsonkepson
+          reviewers: matsonkepson
           assignees: matsonkepson
           draft: false
