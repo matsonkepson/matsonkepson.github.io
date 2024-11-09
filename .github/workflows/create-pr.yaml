@@ -5,7 +5,7 @@ on:
       - develop
 jobs:
   createPullRequestforMain:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -24,7 +24,7 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: develop
-          title: 'Updating main'
+          title: 'Update develop to main'
           labels: |
             update
           assignees: matsonkepson
