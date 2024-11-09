@@ -27,6 +27,6 @@ jobs:
           title: 'Updating main'
           labels: |
             update
-          reviewers: matsonkepson
+          # reviewers: matsonkepson
           assignees: matsonkepson
           draft: false
