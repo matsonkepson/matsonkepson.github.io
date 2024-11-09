@@ -4,7 +4,7 @@ on:
     branches:
       - develop
 jobs:
-  reatePullRequest:
+  createPullRequest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -16,7 +16,7 @@ jobs:
           git reset --hard develop
       - name: Create Pull Request
         id: cpr
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v7.0.5
         with:
           commit-message: Update main
           committer: GitHub <noreply@github.com>
