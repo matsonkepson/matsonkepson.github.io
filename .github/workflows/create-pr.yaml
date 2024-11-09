@@ -4,8 +4,8 @@ on:
     branches:
       - develop
 jobs:
-  reatePullRequest:
-    runs-on: ubuntu-latest
+  createPullRequestforMain:
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
         with:
@@ -16,15 +16,16 @@ jobs:
           git reset --hard develop
       - name: Create Pull Request
         id: cpr
-        uses: peter-evans/create-pull-request@v4
+        uses: peter-evans/create-pull-request@v7.0.5
         with:
+          token: ${{ secrets.PR_TOKEN }}
           commit-message: Update main
           committer: GitHub <noreply@github.com>
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: develop
-          title: 'Updating main'
+          title: 'Update develop to main'
           labels: |
             update
-          reviewers: matsonkepson
+          assignees: matsonkepson
           draft: false
