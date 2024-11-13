@@ -1,0 +1,71 @@
+############################
+## Author
+############################
+
+author:
+  name: "Mateusz (Mati) Kępa"
+  image: author.jpeg
+  greeting: "Blog hosted thanks to [**GitHub Pages** :robot:](https://pages.github.com/)"
+  icon: ":wave:"
+
+############################
+## Links
+############################
+
+links:
+  - email: mailto:devnull@kepa.eu.org
+  - github: https://kepa.eu.org/#
+  - stack-overflow: https://stackoverflow.com/users/7786358/
+  - linkedin: https://linkedin.com/in/matkepa/
+  # - facebook:
+  # - x-twitter:
+  # - mastodon:
+  # - instagram:
+  # - reddit:
+  # - telegram:
+  # - whatsapp:
+  # - signal:
+  # - codepen:
+  # - dev:
+  # - website:
+  # - link:
+  # - discord:
+  # - orcid:
+  # - slack:
+  # - twitch:
+  # - patreon:
+  # - soundcloud:
+  # - dribbble:
+  # - stack-exchange:
+  # - tiktok:
+  # - youtube:
+  # - keybase:
+  # - flickr:
+  # - tumblr:
+  # - kickstarter:
+  # - snapchat:
+  # - bluesky:
+  # - bitbucket:
+  # - bandcamp:
+  # - etsy:
+  # - spotify:
+  # - pinterest:
+  # - strava:
+  # - untappd:
+  # - skype:
+  # - medium:
+  # - foursquare:
+  # - apple:
+  # - amazon:
+  # - google:
+  # - paypal:
+  # - windows:
+
+###############################
+## OpenGraph & Twitter Cards
+###############################
+
+title: "Mati Kepa"
+description: "Build with Qubt & Hugo & GitHub Pages"
+images:
+  - author.jpeg

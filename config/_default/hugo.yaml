@@ -1,0 +1,22 @@
+############################
+## CHANGE THESE
+############################
+
+# baseURL: 'https://chrede88.github.io/qubt'
+baseURL: "https://kepa.eu.org/"
+title: "Mati Kepa"
+
+############################
+## MISC
+############################
+
+enableEmoji: true
+disableKinds: ["taxonomy", "term"]
+languageCode: "en-us"
+timeZone: Etc/UTC
+
+# enableRobotsTXT: true
+
+minify:
+  disableXML: true
+  minifyOutput: true
