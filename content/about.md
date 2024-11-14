@@ -9,7 +9,7 @@ bio: true
 icon: ":coffee:"
 ---
 
-Hello Stranger, 
+Hello there!
 
 My name is Mateusz, but you can call me **Mati** for simplicity. I am originally from Poland :poland: but i live in Austria :austria:.
 
