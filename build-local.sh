@@ -4,7 +4,8 @@ echo 'cleanup ...'
 
 #build with proper symlinks
 echo 'building new one ...'
-hugo --environment prod
+# hugo --environment prod
+hugo serve
 
 ## misc
 #missing customisations of my theme template
@@ -19,4 +20,4 @@ hugo --environment prod
 # sed -i "/<\/head>/i $GA_TAG_INDEX " ./public/about/index.html
 
 #serve to doublecheck locally
-python3 -m http.server --directory ./public/
+# python3 -m http.server --directory ./public/
