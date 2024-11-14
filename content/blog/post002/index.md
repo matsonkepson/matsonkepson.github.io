@@ -5,26 +5,33 @@ date: 2024-11-08
 authors:
   - Mati: author.jpeg
 ---
+
 ### preface
 
 Experiment with using Terraform to set up ArgoCD. Start by creating the necessary files. Then, initialize your Terraform configuration with **terraform init**, and apply the configuration using **terraform apply**.
-APPlication will be created inside argocd namespace, to get the secret run 
+APPlication will be created inside argocd namespace, to get the secret run
+
 ```bash
-k -n argocd get secrets argocd-initial-admin-secret -o jsonpath="{.data.password}"|base64 -d ;echo
-``` 
-to access the application with port forward run 
-```bash 
+k -n argocd get secrets argocd-initial-admin-secret \
+-o jsonpath="{.data.password}"|base64 -d ;echo
+```
+
+to access the application with port forward run
+
+```bash
 k -n argocd port-forward svc/argocd-server 8080:80
 ```
-website : [http://127.0.0.1:8080](http://127.0.0.1:8080) 
+
+website : [http://127.0.0.1:8080](http://127.0.0.1:8080)
 
 username : admin
 
-password: token from previous secret 
-
+password: token from previous secret
 
 ### terraform code
+
 provider.tf
+
 ```terraform
 terraform {
   required_version = ">= 1.9"
@@ -59,11 +66,12 @@ provider "helm" {
 ```
 
 argocd.tf
+
 ```terraform
 ## Equivalent of manual installation
 # helm repo add argo https://argoproj.github.io/argo-helm
 # helm repo update
-# helm install argocd --namespace argocd --create-namespace --version 7.7.0 --values values/argocd.yaml argo/argo-cd
+# helm install argocd --namespace argocd --create-namespace --version 7.7.0 --values config/argocd.yaml argo/argo-cd
 resource "helm_release" "argocd" {
   name = "argocd"
 
@@ -74,10 +82,11 @@ resource "helm_release" "argocd" {
   version          = "7.7.0"
   timeout          = 600
 
-  values = [file("values/argocd.yaml")]
+  values = [file("config/argocd.yaml")]
 }
 ```
-values/argocd.yaml
+
+config/argocd.yaml
 
 ```yaml
 # Disable HTTPS; expose it via ingress and terminate TLS there
