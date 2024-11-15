@@ -1,5 +1,5 @@
 ---
-title: start with argoCD
+title: deploy argoCD with helm or terraform
 summary: Try argoCD with local k8s and terraform! Click for more ...
 date: 2024-11-08
 authors:
@@ -68,10 +68,6 @@ provider "helm" {
 argocd.tf
 
 ```terraform
-## Equivalent of manual installation
-# helm repo add argo https://argoproj.github.io/argo-helm
-# helm repo update
-# helm install argocd --namespace argocd --create-namespace --version 7.7.0 --values config/argocd.yaml argo/argo-cd
 resource "helm_release" "argocd" {
   name = "argocd"
 
@@ -98,4 +94,14 @@ notifications:
   enabled: true
   secret:
     create: false
+```
+
+### bonus
+
+Install argoCD manually with helm
+
+```bash
+helm repo add argo https://argoproj.github.io/argo-helm
+helm repo update
+helm install argocd --namespace argocd --create-namespace --version 7.7.0 --values config/argocd.yaml argo/argo-cd
 ```
