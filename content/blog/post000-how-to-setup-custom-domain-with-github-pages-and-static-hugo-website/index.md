@@ -28,4 +28,4 @@ I've noticed many people using Medium to share their ideas, and it's a fantastic
   - deploy with GH Actions
 
 - next : create cutom mail with zoho
-  setup spf + dkim
+  - setup spf + dkim
