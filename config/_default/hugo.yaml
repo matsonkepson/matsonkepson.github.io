@@ -15,7 +15,7 @@ disableKinds: ["taxonomy", "term"]
 languageCode: "en-us"
 timeZone: Etc/UTC
 
-# enableRobotsTXT: true
+enableRobotsTXT: true
 
 minify:
   disableXML: true

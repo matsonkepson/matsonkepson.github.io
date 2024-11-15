@@ -1,5 +1,5 @@
 ---
-title: bfg repo cleaner
+title: bfg - git history repo cleaner
 summary: Remove huge blobs from your git history repo! Click for more ...
 date: 2024-11-11
 authors:
