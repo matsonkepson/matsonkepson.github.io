@@ -2,9 +2,8 @@
 ## CHANGE THESE
 ############################
 
-# baseURL: 'https://chrede88.github.io/qubt'
 baseURL: "https://kepa.eu.org/"
-title: "Mati Kepa"
+title: "kepa.eu.org"
 
 ############################
 ## MISC
@@ -12,11 +11,17 @@ title: "Mati Kepa"
 
 enableEmoji: true
 disableKinds: ["taxonomy", "term"]
-languageCode: "en-us"
+languageCode: "en-US"
 timeZone: Etc/UTC
 
+## This part is beeing overwritten by the manually created file
 # enableRobotsTXT: true
 
 minify:
   disableXML: true
   minifyOutput: true
+
+sitemap:
+  filename: sitemap.xml
+  changefreq: monthly
+  priority: 0.6
