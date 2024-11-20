@@ -10,7 +10,7 @@ authors:
 
 ---
 
-In this series brief tutorials, I will show you how to generate a simple static website, host it on GitHub Pages with a custom domain, and do it all for free.
+In this series of brief tutorials, I will show you how to generate a simple static website, host it on GitHub Pages with a custom domain, and do it all for free.
 
 I've noticed many people using [Medium](https://medium.com/membership) to share their ideas, and it's a fantastic platform. The concentration of brilliant techies posting their thoughts and solutions is truly impressive. However, what about those who want to build their own brand, promote their own domain independently, and avoid getting lost in the crowd? While it's important to promote our site through various channels to achieve the best rankings, we can still host our small projects on our own domain where we have near-complete control.
 
