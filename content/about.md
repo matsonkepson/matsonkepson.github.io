@@ -3,7 +3,7 @@
 type: misc
 
 # change these
-jobTitle: some random IT dude
+jobTitle: some random DevOps dude
 name: Mati
 bio: true
 icon: ":coffee:"
