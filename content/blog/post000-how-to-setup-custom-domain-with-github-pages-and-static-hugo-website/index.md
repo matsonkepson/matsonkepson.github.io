@@ -48,7 +48,7 @@ echo "theme: ananke" >> hugo.yaml
 hugo serve
 ```
 
-Navigate to the link from the CLI output to check the results, which by default is [http://localhost:1313](http://localhost:1313) If the port is already taken, you will get a random port from the high port range (30000+).
+Navigate to the link from the CLI output to check the results, which by default is [http://localhost:1313/](http://localhost:1313) If the port is already taken, you will get a random port from the high port range (30000+).
 
 Your whole statically generated page is in the **./public** folder within the demo directory. From here, you can take it and publish it wherever you like.
 
@@ -71,6 +71,10 @@ I have the privilege of having my domain registered with [nic.eu.org](https://ni
 To register your own domain, please follow the instructions from this [link](https://nic.eu.org/opendomains.html).
 
 Keep in mind that since this is an unpaid service, [any kind of help is welcome](https://nic.eu.org/tohelp.html), and the request can take some time. I waited around two years for mine, but that was more than ten years ago. It’s still worth it!
+
+#### domain parking
+
+To complement the open-source project of domain registration, I use the freeDNS 42 service [https://freedns.42.pl/](https://freedns.42.pl/index.php?language=en) where I parked my domain. It works brilliantly, and I can highly recommend it!
 
 ### point your domain to GitHubPages
 
