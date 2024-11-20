@@ -6,8 +6,6 @@ authors:
   - Mati: author.jpeg
 ---
 
-:warning: Under Construction :warning:
-
 ## preface
 
 In this brief tutorial, I will show you how to generate a simple static website, host it on GitHub Pages with a custom domain, and do it all for free.
@@ -133,13 +131,8 @@ www.kepa.eu.org.	7119	IN	CNAME	kepa.eu.org.
 
 ```
 
-### create repo in GH
+### next steps
 
-- add proper .gitignore
-- deploy to repo
-- add CNAME file
-- deploy manualy the public only
-- deploy with GH Actions
+Okay, this post turned out longer than expected. I wanted it to be detailed so I could guide you step-by-step without leaving too many questions.
 
-<!-- ### next : create custom mail with zoho
-  - setup spf + dkim -->
+[In my next post](https://kepa.eu.org/blog/post001-how-to-create-github-pages-repo-in-order-to-land-there-static-website-example-with-github-actions/), I'll show you how to properly set up a GitHub repository to use a custom domain and secure it with SSL certificate.
