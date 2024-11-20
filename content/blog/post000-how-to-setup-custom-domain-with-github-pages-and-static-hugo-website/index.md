@@ -1,7 +1,7 @@
 ---
 title: setup static page with hugo, github pages and custom domain
 summary: Click for more ...
-date: 1970-01-01
+date: 2024-11-01
 authors:
   - Mati: author.jpeg
 ---
