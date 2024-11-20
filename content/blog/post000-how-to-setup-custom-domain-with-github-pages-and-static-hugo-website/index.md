@@ -10,7 +10,7 @@ authors:
 
 ---
 
-In this "brief" tutorial, I will show you how to generate a simple static website, host it on GitHub Pages with a custom domain, and do it all for free.
+In this series brief tutorials, I will show you how to generate a simple static website, host it on GitHub Pages with a custom domain, and do it all for free.
 
 I've noticed many people using [Medium](https://medium.com/membership) to share their ideas, and it's a fantastic platform. The concentration of brilliant techies posting their thoughts and solutions is truly impressive. However, what about those who want to build their own brand, promote their own domain independently, and avoid getting lost in the crowd? While it's important to promote our site through various channels to achieve the best rankings, we can still host our small projects on our own domain where we have near-complete control.
 
@@ -20,9 +20,9 @@ I've noticed many people using [Medium](https://medium.com/membership) to share 
 
 ---
 
-To start creating your page, we first need to install the Hugo environment. There are various static page generators like Jekyll, Next.js, and Gatsby.
+To start creating your page, we first need to install the Hugo environment. There are various static page generators like [Jekyll](https://jekyllrb.com/), [Next.js](https://developer.mozilla.org/en-US/blog/static-site-generation-with-nextjs/), and [Gatsby](https://www.gatsbyjs.com/docs/glossary/static-site-generator/).
 
-My goal was to be quite versatile, and the ease of use when creating a website comes down to creating the proper Markdown files, which is both easy and awesome! I chose [Hugo](https://gohugo.io/) after digging into multiple sources and receiving good feedback, as well as the extensive marketplace of [themes](https://themes.gohugo.io/).
+My goal was to be quite versatile. The benefits and ease of use when creating a website comes down to creating the proper Markdown files, which is both easy and awesome! I chose [Hugo](https://gohugo.io/) after digging into multiple sources and receiving good feedback, as well as the extensive marketplace of [themes](https://themes.gohugo.io/).
 
 Hugo is blazing fast and is supported on many platforms and through multiple package managers. I personally use Ubuntu Linux as my base host, which is supported out of the box.
 
