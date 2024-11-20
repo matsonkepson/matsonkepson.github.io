@@ -8,13 +8,17 @@ authors:
 
 ## preface
 
-In this brief tutorial, I will show you how to generate a simple static website, host it on GitHub Pages with a custom domain, and do it all for free.
+---
 
-I've noticed many people using Medium to share their ideas, and it's a fantastic platform. The concentration of brilliant techies posting their thoughts and solutions is truly impressive. However, what about those who want to build their own brand, promote their own domain independently, and avoid getting lost in the crowd? While it's important to promote our site through various channels to achieve the best rankings, we can still host our small projects on our own domain where we have near-complete control.
+In this "brief" tutorial, I will show you how to generate a simple static website, host it on GitHub Pages with a custom domain, and do it all for free.
+
+I've noticed many people using [Medium](https://medium.com/membership) to share their ideas, and it's a fantastic platform. The concentration of brilliant techies posting their thoughts and solutions is truly impressive. However, what about those who want to build their own brand, promote their own domain independently, and avoid getting lost in the crowd? While it's important to promote our site through various channels to achieve the best rankings, we can still host our small projects on our own domain where we have near-complete control.
 
 ## steps
 
 ### install hugo
+
+---
 
 To start creating your page, we first need to install the Hugo environment. There are various static page generators like Jekyll, Next.js, and Gatsby.
 
@@ -27,6 +31,8 @@ Whole setup details, including repositories, can be found under this [link](http
 Keep in mind that Hugo requires [Golang](https://go.dev/doc/install) version 1.22 or higher and sometimes the [dart-sass](https://gohugo.io/hugo-pipes/transpile-sass-to-css/#dart-sass) package for proper CSS transpilation.
 
 ### create a simple website
+
+---
 
 The documentation steps can be found under this [link.](https://gohugo.io/getting-started/quick-start/)
 
@@ -54,6 +60,8 @@ Keep in mind that if you did not stop the **hugo serve** command, all changes wi
 
 ### install theme
 
+---
+
 :warning: This part can be tricky since each template works differently! Some templates work directly via a **git submodule add** or the **hugo mod get** command. Others need to be copied or cloned directly from the template creator's Git repository.
 
 First, choose your favorite theme from the official site [https://themes.gohugo.io/](https://themes.gohugo.io/). Then, navigate to the details of the theme and follow the instructions provided in the description!
@@ -61,6 +69,8 @@ First, choose your favorite theme from the official site [https://themes.gohugo.
 After you have found it and properly installed and configured the details, give it a try and run the **hugo serve** command!
 
 ### own domain
+
+---
 
 If you already have your domain, you can skip this point.
 
@@ -74,7 +84,9 @@ Keep in mind that since this is an unpaid service, [any kind of help is welcome]
 
 To complement the open-source project of domain registration, I use the freeDNS 42 service [https://freedns.42.pl/](https://freedns.42.pl/index.php?language=en) where I parked my domain. It works brilliantly, and I can highly recommend it!
 
-### point your domain to GitHubPages
+### point your origin to GitHubPages
+
+---
 
 If you have your own domain registered already, inside your DNS settings point the A/AAAA or an ALIAS record of the origin **@** to the following IP addresses:
 
@@ -114,13 +126,13 @@ kepa.eu.org.		6917	IN	AAAA	2606:50c0:8002::153
 
 At a later step, when registering the custom domain in your GitHub repository, you will be asked to add a TXT record to verify that you are the owner of the DNS origin. This is a common process for many providers, so there's no need to worry.
 
-#### redirection with www+tld
+#### redirection with www+yourTLD
 
 Please don't forget to create a CNAME record inside your DNS Zone for your custom domain with **www** in front!
 
-This will allow you to reach your website not only with the top-level domain (TLD) but also with **www**.
+This will allow you to reach your website not only with the domain (TLD) but also with **www**.
 
-For example, you can reach my website at [kepa.eu.org](http://kepa.eu.org) as well as [www.kepa.eu.org](http://www.kepa.eu.org). Many forget about this, but it's quite handy!
+For example, you can reach my website at [kepa.eu.org](http://kepa.eu.org) as well as [www.kepa.eu.org](http://www.kepa.eu.org). Many forget about this, but it's quite handy and eliminates potential issues with link forwarding!
 
 Example anwser from dig
 
@@ -132,6 +144,8 @@ www.kepa.eu.org.	7119	IN	CNAME	kepa.eu.org.
 ```
 
 ### next steps
+
+---
 
 Okay, this post turned out longer than expected. I wanted it to be detailed so I could guide you step-by-step without leaving too many questions.
 
