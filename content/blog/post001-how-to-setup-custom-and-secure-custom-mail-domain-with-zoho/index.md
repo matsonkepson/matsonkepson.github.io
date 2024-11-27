@@ -1,5 +1,5 @@
 ---
-title: setup custom and secure custom mail domain with zoho 
+title: setup custom and secure mail domain with zoho 
 summary: Click for more ...
 date: 2024-11-20
 authors:
