@@ -201,10 +201,22 @@ After you create and activate your custom domain, you will be prompted to add an
 ### deploy with GH Actions
 
 #### proper file
-[Original docu link](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
-[Link to my repo](https://github.com/matsonkepson/matsonkepson.github.io/blob/main/.github/workflows/hugo-deploy.yaml)
 
-```yaml
+[Original documentation link](https://gohugo.io/hosting-and-deployment/hosting-on-github/).
+
+Please find [here](https://github.com/matsonkepson/matsonkepson.github.io/blob/main/.github/workflows/hugo-deploy.yaml) an example file which I am using to provision my GitHub Action.
+Remember to place your yaml file inside following folder structure inside your repo **.github/workflows**
+
+The most crutial parts are the following:
+
+| Code Line number | Description                                                                 |
+| :--------------: | :-------------------------------------------------------------------------- |
+|        33        | the same OS I am currently testing my changes                               |
+|        35        | the same cli version of hugo I am using locally                             |
+|        60        | use this to properly transalte links for your internal subpages             |
+|        64        | all published inside ./public folder will be visible under your apex domain |
+
+```yaml showLineNumbers
 # Sample workflow for building and deploying a Hugo site to GitHub Pages
 name: Deploy Hugo site to Pages
 
@@ -244,7 +256,7 @@ jobs:
       - name: Install Hugo CLI
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Install Dart Sass
         run: sudo snap install dart-sass
       - name: Checkout
@@ -264,7 +276,7 @@ jobs:
           TZ: Etc/UTC
         run: |
           hugo \
-            --environment prod         
+            --environment prod
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -285,12 +297,25 @@ jobs:
 
 #### proper setting inside repository settings
 
+Once again navigate to
+
+- the **Settings** :wheel: icon of this repository
+- from the left sidebar, under **General** :wheel:
+- go to **Pages** inside the _Code and automation_ section.
+
+This time change **Source** to _GitHub Actions_ and select proper file name _Deploy Hugo site to Pages_ like in my case.
+
 ![pic](./2024-11-27_16-38.png)
 
-### next steps
+After this is done, each commit you you push to master or main branch will result an action like in the picture below
+
+![pic](./2024-11-27_17-07.png)
+
+### Thats it!
+
+Have fun with troubleshooting :smile:
 
 ---
-
 
 [In my next post](https://kepa.eu.org/blog/post001-how-to-setup-custom-and-secure-custom-mail-domain-with-zoho/), I'll show you how to properly set up a free and secure email box with custom domain which works like a charm.
 
