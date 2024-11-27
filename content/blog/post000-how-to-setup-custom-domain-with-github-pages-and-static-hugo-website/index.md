@@ -1,5 +1,5 @@
 ---
-title: setup static page with hugo, github pages and custom domain
+title: setup static page with hugo, github pages, actions and custom domain
 summary: Click for more ...
 date: 2024-11-01
 authors:
@@ -88,6 +88,10 @@ To complement the open-source project of domain registration, I use the freeDNS 
 
 ---
 
+The entire process is detailed in this [official GitHub Pages documentation](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+
+I am describing it prior to repository deployment because DNS changes can take up to 24 hours to propagate!
+
 If you have your own domain registered already, inside your DNS settings point the A/AAAA or an ALIAS record of the origin **@** to the following IP addresses:
 
 ```bash
@@ -143,10 +147,152 @@ www.kepa.eu.org.	7119	IN	CNAME	kepa.eu.org.
 
 ```
 
+### add proper .gitignore
+
+When we run the **hugo** command, the engine generates several additional files and folders where we can see the result of our generated website. These files change quite frequently, so we might consider excluding them from the target repository, unless we intend to serve the build via GitHub Actions.
+
+Keep in mind that after you run Hugo in your CLI shell, the **./public** folder is all you need to run your website. This folder contains everything necessary, such as HTML files, SCSS, JS, and images, and you're ready to go.
+
+Below an example
+
+```bash
+# Hugo stuff
+.hugo_build.lock
+resources/
+public/
+```
+
+### deploy to repo and activate pages
+
+Before or after creating your repository, ensure that it is publicly available to host it properly.
+
+![pic](./2024-11-27_16-29.png)
+
+We will now push our changes to the freshly created repository and activate GitHub Pages for it.
+
+After the changes are pushed, navigate to
+
+- the **Settings** :wheel: icon of this repository
+- from the left sidebar, under **General** :wheel:
+- go to **Pages** inside the _Code and automation_ section.
+
+As mentioned before, since you have already generated your page, all you need to do is publish the content of the **./public** folder to your repository. You can add it either to the root directory **/(root)** or the **/docs** folder to publish your website. That's all you need to do for a classical setup.
+
+![pic](./2024-11-27_15-31.png)
+
+However, if you want to build everything with GitHub Actions, please add the **.gitignore** file as mentioned earlier and publish the entire content of your current Hugo website folder.
+
+### Custom Domain
+
+#### CNAME and certificate
+
+After saving your changes when deploying from a branch (GitHub Actions will follow), please add your custom domain name as described in step **2** (as shown in the picture). For more details, [follow this link](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+
+Additionally, make sure to enforce the HTTPS checkbox, as indicated in step **3**.
+
+The domain of your choice should also be saved as a file named **CNAME**, containing the correct subdomain name, inside the folder of your website. Otherwise, proper HTTPS and domain redirection will not work. For more details, [follow this link](https://stackoverflow.com/questions/9082499/custom-domain-for-github-project-pages)
+
+![pic](./2024-11-27_15-49.png)
+
+#### setup proper DNS TXT verification
+
+After you create and activate your custom domain, you will be prompted to add an additional TXT challenge to your DNS configuration to verify ownership. For more details, [follow this link](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/verifying-your-custom-domain-for-github-pages).
+
+### deploy with GH Actions
+
+#### proper file
+[Original docu link](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
+[Link to my repo](https://github.com/matsonkepson/matsonkepson.github.io/blob/main/.github/workflows/hugo-deploy.yaml)
+
+```yaml
+# Sample workflow for building and deploying a Hugo site to GitHub Pages
+name: Deploy Hugo site to Pages
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches:
+      - main
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-22.04
+    env:
+      HUGO_VERSION: 0.137.1
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb          
+      - name: Install Dart Sass
+        run: sudo snap install dart-sass
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v5
+      - name: Install Node.js dependencies
+        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      - name: Build with Hugo
+        env:
+          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
+          HUGO_ENVIRONMENT: production
+          TZ: Etc/UTC
+        run: |
+          hugo \
+            --environment prod         
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-22.04
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+#### proper setting inside repository settings
+
+![pic](./2024-11-27_16-38.png)
+
 ### next steps
 
 ---
 
-Okay, this post turned out longer than expected. I wanted it to be detailed so I could guide you step-by-step without leaving too many questions.
 
-[In my next post](https://kepa.eu.org/blog/post001-how-to-create-github-pages-repo-in-order-to-land-there-static-website-example-with-github-actions/), I'll show you how to properly set up a GitHub repository to use a custom domain and secure it with SSL certificate.
+[In my next post](https://kepa.eu.org/blog/post001-how-to-setup-custom-and-secure-custom-mail-domain-with-zoho/), I'll show you how to properly set up a free and secure email box with custom domain which works like a charm.
+
+- create custom mail with zoho
+- setup spf + dkim
