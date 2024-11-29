@@ -1,7 +1,7 @@
 ---
 title: setup custom and secure mail domain with zoho
 summary: Click for more ...
-date: 2024-11-20
+date: 2024-11-02
 authors:
   - Mati: author.jpeg
 ---

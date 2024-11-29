@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 rm -rf ~/.cache/hugo_cache/
 rm -rf ./public
