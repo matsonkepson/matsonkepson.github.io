@@ -168,7 +168,15 @@ Before or after creating your repository, ensure that it is publicly available t
 
 ![pic](./2024-11-27_16-29.png)
 
-We will now push our changes to the freshly created repository and activate GitHub Pages for it.
+We will now push our changes to the freshly created repository and activate GitHub Pages.
+
+> At this moment I do expect the you are publishing your changes to gihub repo :robot:
+> and if you dont know how please support yourself with this [link!](https://docs.github.com/en/get-started/start-your-journey/uploading-a-project-to-github).
+>
+> P.S. Use this command to generate a strong SSH key for communicating with your resources on GitHub:
+> ```bash 
+> ssh-keygen -t ed25519 -a 100 -C "yourEmail@domain.com"
+> ```
 
 After the changes are pushed, navigate to
 
