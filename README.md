@@ -1,8 +1,8 @@
 ## Personal Blog Source Code Repository
 
-cretated with [Hugo](https://gohugo.io/) and [Qubt](https://github.com/chrede88/qubt) - Template
+Created with [Hugo](https://gohugo.io/) and [Qubt](https://github.com/chrede88/qubt) - Template
 
-visit [https://kepa.eu.org](https://kepa.eu.org/)
+Visit [https://kepa.eu.org](https://kepa.eu.org/)
 
 ---
 
