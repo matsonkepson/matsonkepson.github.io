@@ -8,8 +8,9 @@ authors:
 
 ### preface
 
-Experiment with using Terraform to set up ArgoCD. Start by creating the necessary files. Then, initialize your Terraform configuration with **terraform init**, and apply the configuration using **terraform apply**.
-APPlication will be created inside argocd namespace, to get the secret run
+Experiment with using Terraform to set up ArgoCD. Start by creating the necessary files. Then, initialize your Terraform
+configuration with **terraform init**, and apply the configuration using **terraform apply**.
+Application will be created inside argoCD namespace, to get the secret run
 
 ```bash
 k -n argocd get secrets argocd-initial-admin-secret \
@@ -22,7 +23,7 @@ to access the application with port forward run
 k -n argocd port-forward svc/argocd-server 8080:80
 ```
 
-website : [http://127.0.0.1:8080](http://127.0.0.1:8080)
+website: [http://127.0.0.1:8080](http://127.0.0.1:8080)
 
 username : admin
 

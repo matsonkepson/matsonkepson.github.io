@@ -14,7 +14,7 @@ disableKinds: ["taxonomy", "term"]
 languageCode: "en-US"
 timeZone: Etc/UTC
 
-## This part is beeing overwritten by the manually created file
+## This part is being overwritten by the manually created file
 # enableRobotsTXT: true
 
 minify:

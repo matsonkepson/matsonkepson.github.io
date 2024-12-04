@@ -1,6 +1,6 @@
 function addGoogleAnalyticsTag() {
-    var script = document.createElement('script');
-    var trackingID = 'G-81E77KGMGF'
+    const script = document.createElement('script');
+    const trackingID = 'G-81E77KGMGF';
     script.async = true;
     script.src = "https://www.googletagmanager.com/gtag/js?id=" + trackingID;
     document.head.appendChild(script);
