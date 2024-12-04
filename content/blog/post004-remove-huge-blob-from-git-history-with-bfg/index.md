@@ -8,7 +8,9 @@ authors:
 
 ### preface
 
-Suppose you accidentally committed a 1GB blob file. I assume you are using [Git Large File Storage (LFS)](https://git-lfs.com/). Even after removing it from your local repository, it still persists in your **.git** history. How can you permanently remove it?
+Suppose you accidentally committed a 1GB blob file. I assume you are
+using [Git Large File Storage (LFS)](https://git-lfs.com/). Even after removing it from your local repository, it still
+persists in your **.git** history. How can you permanently remove it?
 
 To learn more about the bfg tool, [use this link](https://rtyley.github.io/bfg-repo-cleaner/).
 

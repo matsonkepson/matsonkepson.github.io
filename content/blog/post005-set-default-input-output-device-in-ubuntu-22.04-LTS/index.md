@@ -10,7 +10,9 @@ authors:
 
 ---
 
-Recently, I have been working constantly with my old laptop that runs Ubuntu. Each time I log in, I have to manually change the input and output device settings for sound, which is quite annoying. To resolve this, I created a script that sets these preferences at startup, so I don't need to adjust them manually each time.
+Recently, I have been working constantly with my old laptop that runs Ubuntu. Each time I log in, I have to manually
+change the input and output device settings for sound, which is quite annoying. To resolve this, I created a script that
+sets these preferences at startup, so I don't need to adjust them manually each time.
 
 ## steps
 
@@ -43,10 +45,11 @@ pactl set-default-source ${DEFAULT_MIC}
 
 ```
 
-### the preffered way
+### the preferred way
 
-I have created this [>Gist<](https://gist.github.com/matsonkepson/de6327b8aa7677c6048ff1d29c81be57) which you only need to run once to resolve the issue.
-Below is an Gist script that you can use to set this up for autostart:
+I have created this [>Gist<](https://gist.github.com/matsonkepson/de6327b8aa7677c6048ff1d29c81be57) which you only need
+to run once to resolve the issue.
+Below is a Gist script that you can use to set this up for autostart:
 
 ```bash
 #!/usr/bin/env bash

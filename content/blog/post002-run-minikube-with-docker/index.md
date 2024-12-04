@@ -8,7 +8,9 @@ authors:
 
 ### preface
 
-While there are other options like Kind, K3s, MicroK8s, the Minikube is a balance of simplicity, flexibility, additionally community support makes it a great choice for many developers. Whats more ist really super simple to start with. To stat, all you need to have is installed docker engine and kubectl cli locally!
+While there are other options like Kind, K3s, MicroK8s, the Minikube is a balance of simplicity, flexibility,
+additionally community support makes it a great choice for many developers. What's more ist really super simple to start
+with. To stat, all you need to have is installed docker engine and kubectl cli locally!
 
 ### install minikube
 
