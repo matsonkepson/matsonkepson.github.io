@@ -19,5 +19,5 @@ hugo serve
 # sed -i "/<\/head>/i $GA_TAG_INDEX " ./public/blog/index.html
 # sed -i "/<\/head>/i $GA_TAG_INDEX " ./public/about/index.html
 
-#serve to doublecheck locally
+#serve to double check locally
 # python3 -m http.server --directory ./public/

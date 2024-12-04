@@ -10,9 +10,11 @@ authors:
 
 ---
 
-This tutorial, is a continuation of the previous of the series which you can find [here](https://kepa.eu.org/blog/post000-how-to-setup-custom-domain-with-github-pages-and-static-hugo-website/).
+This tutorial, is a continuation previous of the series which you can
+find [here](https://kepa.eu.org/blog/post000-how-to-setup-custom-domain-with-github-pages-and-static-hugo-website/).
 
-[Zoho](https://www.zoho.com/mail/) offers a free business email account for one domain, which we can use for our purposes.
+[Zoho](https://www.zoho.com/mail/) offers a free business email account for one domain, which we can use for our
+purposes.
 The free tier is limited as follows:
 
 - 5 user accounts
@@ -25,7 +27,8 @@ The free tier is limited as follows:
 
 ## steps
 
-Since the official documentation is well-described on their website, I'll spare both of us the burden of copying and pasting.
+Since the official documentation is well-described on their website, I'll spare both of us the burden of copying and
+pasting.
 
 - [create custom mail with zoho for free](https://www.zoho.com/mail/how-to/create-business-email-address.html?src=mft)
 - [setup spf + dkim](https://www.zoho.com/mail/how-to/setup-my-domain-with-zoho-mail.html)
