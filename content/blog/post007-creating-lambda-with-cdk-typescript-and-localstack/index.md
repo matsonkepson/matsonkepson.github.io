@@ -85,9 +85,9 @@ After the container is ready to go you can check it directly from the web page w
 [https://app.localstack.cloud/inst/default/overview](https://app.localstack.cloud/inst/default/overview)
 
 - Bootstrap to activate CloudFormation Api
-  
+
   If this step fails at the first time please stop the localstack container and remove the
-      **localstack/volume** folder with sudo permissions from the cloned repo!
+  **localstack/volume** folder with sudo permissions from the cloned repo!
 
 ```bash
 cdklocal bootstarp
@@ -96,25 +96,28 @@ cdklocal bootstarp
 ![2024-12-04_18-44.png](./2024-12-04_18-44.png)
 
 - Deploy your changes to LocalStack
+
 ```bash
 cdklocal deploy
 ```
+
 ![2024-12-04_18-45.png](./2024-12-04_18-45.png)
 
-
 - Update your config and check the drift
+
 ```bash
 cdklocal diff
 ```
+
 ![2024-12-04_18-48.png](./2024-12-04_18-48.png)
 
 - Check the results
-![2024-12-04_18-40.png](./2024-12-04_18-40.png)
+  ![2024-12-04_18-40.png](./2024-12-04_18-40.png)
 
 - Search the Lambda resource
-![2024-12-04_18-46.png](./2024-12-04_18-46.png)
+  ![2024-12-04_18-46.png](./2024-12-04_18-46.png)
 
 - Invoke the Lambda and see your results
-![2024-12-04_18-47.png](./2024-12-04_18-47.png)
+  ![2024-12-04_18-47.png](./2024-12-04_18-47.png)
 
 ## That's it! :tada:
