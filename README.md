@@ -6,7 +6,7 @@ Visit [https://kepa.eu.org](https://kepa.eu.org/)
 
 ---
 
-### GitHub Action Stats
+### GitHub Action Stats 
 
 ![GitHub Pages](https://github.com/matsonkepson/matsonkepson.github.io/actions/workflows/hugo-deploy.yaml/badge.svg?branch=main)
 
