@@ -1,19 +1,20 @@
-function addGoogleAnalyticsTag() {
+function addGoogleAnalyticsTag(trackingId) {
+    // Load the gtag.js script asynchronously
     const script = document.createElement('script');
-    const trackingID = 'G-81E77KGMGF';
     script.async = true;
-    script.src = "https://www.googletagmanager.com/gtag/js?id=" + trackingID;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
     document.head.appendChild(script);
 
-    script.onload = function () {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', trackingID);
-    };
+    // Initialize the dataLayer and gtag function
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    
+    // Initialize gtag
+    gtag('js', new Date());
+    gtag('config', trackingId);
 }
 
-// Call the function to add the Google Analytics tag
-addGoogleAnalyticsTag();
+// Call the function with your tracking ID
+addGoogleAnalyticsTag('G-81E77KGMGF');
