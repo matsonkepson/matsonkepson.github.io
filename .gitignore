@@ -3,6 +3,7 @@
 **/resources/_gen/
 resources/
 public/
+venv/
 
 # Apple stuff
 .DS_Store
