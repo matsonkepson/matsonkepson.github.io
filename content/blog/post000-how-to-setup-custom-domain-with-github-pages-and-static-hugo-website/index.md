@@ -208,7 +208,8 @@ We will now push our changes to the freshly created repository and activate GitH
 > this [link!](https://docs.github.com/en/get-started/start-your-journey/uploading-a-project-to-github).
 >
 > P.S. Use this command to generate a strong SSH key for communicating with your resources on GitHub:
-> ```bash 
+>
+> ```bash
 > ssh-keygen -t ed25519 -a 100 -C "yourEmail@domain.com"
 > ```
 
@@ -218,8 +219,8 @@ After the changes are pushed, navigate to
 - from the left sidebar, under **General** :wheel:
 - go to **Pages** inside the _Code and automation_ section.
 
-As mentioned before, since you have already generated your page, all you need to do is publish the content of the *
-*./public** folder to your repository. You can add it either to the root directory **/(root)** or the **/docs** folder
+As mentioned before, since you have already generated your page, all you need to do is publish the content of the \*
+\*./public** folder to your repository. You can add it either to the root directory **/(root)** or the **/docs\*\* folder
 to publish your website. That's all you need to do for a classical setup.
 
 ![pic](./2024-11-27_15-31.png)
@@ -262,7 +263,7 @@ Remember to place your yaml file inside following folder structure inside your r
 The most crucial parts are the following:
 
 | Code Line number | Description                                                                 |
-|:----------------:|:----------------------------------------------------------------------------|
+| :--------------: | :-------------------------------------------------------------------------- |
 |        33        | the same OS I am currently testing my changes                               |
 |        35        | the same cli version of hugo I am using locally                             |
 |        60        | use this to properly translate links for your internal subpages             |

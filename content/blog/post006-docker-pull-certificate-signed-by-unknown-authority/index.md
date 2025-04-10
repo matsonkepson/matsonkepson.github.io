@@ -3,9 +3,7 @@ title: fix "docker pull" certificate signed by unknown authority
 summary: Click for more ...
 date: 2024-12-03
 authors:
-
   - Mati: author.jpeg
-
 ---
 
 ## preface
@@ -19,7 +17,6 @@ as trustworthy. To fix this, you need to ensure that the certificates used by yo
 configured and trusted by Docker. This might involve adding the certificate to Docker's trusted certificate list or
 correctly setting up the repository's SSL configuration. Doing this will prevent the untrusted repository error and
 facilitate smooth interaction between Docker and your local repository.
-
 
 > This post originates from my highest-rated [answer](https://stackoverflow.com/a/55260438/7786358) on Stack Overflow.
 
@@ -52,7 +49,7 @@ openssl s_client -showcerts -connect ${registry_address}:${registry_port} < /dev
 ### Second solution, importing certificate to system
 
 1. save the certificate to the file
-    - :exclamation: the port is crucial, no need for the protocol :exclamation:
+   - :exclamation: the port is crucial, no need for the protocol :exclamation:
 
 ```bash
 export registry_address="local.repo.com" # adjust to your needs
