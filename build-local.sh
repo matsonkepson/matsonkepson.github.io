@@ -1,6 +1,27 @@
 #!/usr/bin/env bash
+set -e  # Exit on error
+
 echo 'cleanup ...'
 ./clean.sh
+
+# Check if Python3 is installed
+if ! command -v python3 &> /dev/null; then
+    echo "Error: python3 is not installed. Please install Python 3.x"
+    exit 1
+fi
+
+# Add venv with error handling
+echo "Creating Python virtual environment..."
+python3 -m venv venv || { echo "Failed to create virtual environment"; exit 1; }
+source venv/bin/activate || { echo "Failed to activate virtual environment"; exit 1; }
+
+# Install dependencies
+echo "Installing dependencies..."
+python3 -m pip install --upgrade pip || { echo "Failed to upgrade pip"; exit 1; }
+python3 -m pip install -r requirements.txt || { echo "Failed to install requirements"; exit 1; }
+
+#run pre-commit hooks
+pre-commit clean && pre-commit run --all-files --verbose
 
 #build with proper symlinks
 echo 'building new one ...'
