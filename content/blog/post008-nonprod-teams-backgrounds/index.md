@@ -22,9 +22,6 @@ Here are some of my favorite Teams backgrounds :smiley:
 
 Feel free to download and use them to add some fun to your meetings!
 
-<details>
-<summary>Click to expand the list of images</summary>
-
 | Backgrounds                                                 |
 | ----------------------------------------------------------- |
 | ![Background It's Okay](images/background_itsokay.jpg)      |
@@ -38,9 +35,7 @@ Feel free to download and use them to add some fun to your meetings!
 | ![Background The Office](images/background_theOffice.png)   |
 | ![Background Bluescreen](images/background_bluescreen.png)  |
 
-</details>
-
 P.S.
-Special thanks to [LazyAdmin](https://lazyadmin.nl/office-365/funny-teams-backgrounds/) for the inspiration.
+Special thanks to [LazyAdmin](https://lazyadmin.nl/) for the inspiration.
 
 ---
