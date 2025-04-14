@@ -24,7 +24,7 @@ jobs:
           author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
           signoff: false
           branch: develop
-          title: "Update develop to main"
+          title: 'Update develop to main'
           labels: |
             update
           assignees: matsonkepson

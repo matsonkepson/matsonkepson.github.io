@@ -1,6 +1,6 @@
 function addGoogleAnalyticsTag(trackingId) {
   // Load the gtag.js script asynchronously
-  const script = document.createElement("script");
+  const script = document.createElement('script');
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
   document.head.appendChild(script);
@@ -12,9 +12,9 @@ function addGoogleAnalyticsTag(trackingId) {
   }
 
   // Initialize gtag
-  gtag("js", new Date());
-  gtag("config", trackingId);
+  gtag('js', new Date());
+  gtag('config', trackingId);
 }
 
 // Call the function with your tracking ID
-addGoogleAnalyticsTag("G-81E77KGMGF");
+addGoogleAnalyticsTag('G-81E77KGMGF');

@@ -21,7 +21,7 @@ python3 -m pip install --upgrade pip || { echo "Failed to upgrade pip"; exit 1; 
 python3 -m pip install -r requirements.txt || { echo "Failed to install requirements"; exit 1; }
 
 # Fresh run of pre-commit hooks
-pre-commit gc 
+pre-commit gc
 pre-commit clean
 pre-commit run --all-files --verbose
 

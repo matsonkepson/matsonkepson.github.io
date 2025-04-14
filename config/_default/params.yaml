@@ -3,10 +3,10 @@
 ############################
 
 author:
-  name: "Mateusz (Mati) Kępa"
+  name: 'Mateusz (Mati) Kępa'
   image: author.jpeg
-  greeting: "Hello there and welcome to my page! :hugs:"
-  icon: ":wave:"
+  greeting: 'Hello there and welcome to my page! :hugs:'
+  icon: ':wave:'
 
 ############################
 ## Links
@@ -65,7 +65,7 @@ links:
 ## OpenGraph & Twitter Cards
 ###############################
 
-title: "Mati Kepa"
-description: "Build with Qubt & Hugo & GitHub Pages"
+title: 'Mati Kepa'
+description: 'Build with Qubt & Hugo & GitHub Pages'
 images:
   - author.jpeg

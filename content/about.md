@@ -6,7 +6,7 @@ type: misc
 jobTitle: some random IT dude
 name: Mati
 bio: true
-icon: ":coffee:"
+icon: ':coffee:'
 ---
 
 Hello there! :hugs:
