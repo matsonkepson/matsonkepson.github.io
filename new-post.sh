@@ -2,7 +2,7 @@
 
 # List folders and iterate one number further
 # shellcheck disable=SC2012
-NEXT_NUM=$(ls -1 content/blog/ | awk 'END {match($0, /post([0-9]+)/, next_num); print "post" sprintf("%03d", next_num[1]+1)}')
+NEXT_NUM=$(ls -1 content/blog/ | awk '/post[0-9]+/{num=substr($0,5)+0} END{printf "post%03d", (num?num:0)+1}')
 
 # Prompt the user for input
 echo "Please enter new post title:"

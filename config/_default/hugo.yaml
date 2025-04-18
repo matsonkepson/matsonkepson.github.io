@@ -2,16 +2,16 @@
 ## CHANGE THESE
 ############################
 
-baseURL: "https://kepa.eu.org/"
-title: "kepa.eu.org"
+baseURL: 'https://kepa.eu.org/'
+title: 'kepa.eu.org'
 
 ############################
 ## MISC
 ############################
 
 enableEmoji: true
-disableKinds: ["taxonomy", "term"]
-languageCode: "en-US"
+disableKinds: ['taxonomy', 'term']
+languageCode: 'en-US'
 timeZone: Etc/UTC
 
 ## This part is being overwritten by the manually created file
@@ -29,5 +29,5 @@ sitemap:
 security:
   allow_frame: false
   csp:
-    policy: ""
+    policy: ''
     report_only: false
